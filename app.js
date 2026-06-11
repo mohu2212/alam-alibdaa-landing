@@ -80,4 +80,57 @@
       trackConversion(this.getAttribute('data-conversion'), this);
     });
   });
+
+  /* =======================================================================
+     6) فورم «احجز معاينتك» — يبني رسالة واتساب جاهزة بالبيانات ويفتحها
+     ======================================================================= */
+  const WHATSAPP_NUMBER = '966552119299';
+  const form = document.getElementById('booking-form');
+  if (form) {
+    const markError = (el, on) => {
+      el.classList.toggle('ring-2', on);
+      el.classList.toggle('ring-red-400', on);
+      el.classList.toggle('border-red-400', on);
+    };
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const project = form.project.value.trim();
+      const city = form.city.value.trim();
+      const details = form.details.value.trim();
+
+      // التحقق من الحقول المطلوبة
+      let ok = true;
+      [['name', name], ['project', project]].forEach(([key, val]) => {
+        const valid = val.length > 0;
+        markError(form[key], !valid);
+        if (!valid) ok = false;
+      });
+      if (!ok) {
+        (name ? form.project : form.name).focus();
+        return;
+      }
+
+      // بناء نص الرسالة (تجاهل الحقول الفارغة)
+      const lines = [
+        'السلام عليكم، أرغب في طلب معاينة مجانية لمشروعي:',
+        '• الاسم: ' + name,
+        '• نوع المشروع: ' + project,
+      ];
+      if (city) lines.push('• المدينة/المنطقة: ' + city);
+      if (details) lines.push('• تفاصيل إضافية: ' + details);
+
+      const url =
+        'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+      trackConversion('whatsapp', form);
+      window.open(url, '_blank', 'noopener');
+    });
+
+    // إزالة تمييز الخطأ بمجرد البدء في الكتابة/الاختيار
+    ['name', 'project'].forEach((key) => {
+      form[key].addEventListener('input', () => markError(form[key], false));
+      form[key].addEventListener('change', () => markError(form[key], false));
+    });
+  }
 })();
