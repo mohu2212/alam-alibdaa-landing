@@ -9,3 +9,9 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Deployment artifact (regenerable)
+alibdaa-contracting-deploy.zip
+
+# Raw source images (kept local only)
+project 1/
