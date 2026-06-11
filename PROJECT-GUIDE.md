@@ -12,7 +12,7 @@
 
 - **الريبو:** https://github.com/mohu2212/alam-alibdaa-landing
 - **النسخة الحية (GitHub Pages):** https://mohu2212.github.io/alam-alibdaa-landing/
-- **الدومين المستهدف:** https://alibdaa-contracting.com (يُستضاف على Hostinger)
+- **الدومين المستهدف:** https://alamalibdaa.com (يُستضاف على Hostinger)
 
 ---
 
@@ -42,7 +42,7 @@ npm run serve      # معاينة محلية http://localhost:5173
 ├── og-card.html                # قالب توليد صورة بريفيو اللينك (أداة، لا يُنشر)
 ├── PROJECT-GUIDE.md            # هذا الملف
 ├── README.md                   # تعليمات سريعة
-├── alibdaa-contracting-deploy.zip   # حزمة النشر الجاهزة (الملفات الثابتة فقط)
+├── alamalibdaa-deploy.zip   # حزمة النشر الجاهزة (الملفات الثابتة فقط)
 ├── assets/
 │   ├── logo.png / logo.webp    # الشعار (دائري شفاف، بعد إزالة رقم السجل)
 │   ├── favicon.ico / favicon-32.png / apple-touch-icon.png
@@ -165,8 +165,8 @@ npm run serve      # معاينة محلية http://localhost:5173
 - **Description:** «شركة عالم الإبداع المتطورة للمقاولات العامة — مظلات وسواتر، مستودعات وهناجر،
   فلل ومولات وفنادق ومساجد وقصور. تغطية كافة مناطق المملكة على مدار 24 ساعة بأوراق رسمية معتمدة. اتصل الآن 0552119299.»
 - **Keywords:** مقاولات عامة, مقاول السعودية, مظلات وسواتر, هناجر حديدية, مستودعات, بناء فلل, ترميمات, مقاولات الرياض, عالم الإبداع المتطورة
-- **canonical / og:url:** `https://alibdaa-contracting.com/`
-- **OG/Twitter image:** `https://alibdaa-contracting.com/assets/og-image.jpg`
+- **canonical / og:url:** `https://alamalibdaa.com/`
+- **OG/Twitter image:** `https://alamalibdaa.com/assets/og-image.jpg`
 - **JSON-LD:** نوع `GeneralContractor` (الاسم، الهاتف +966552119299، التغطية SA، ساعات العمل).
 - `lang="ar" dir="rtl"`، `theme-color #1A4B9C`.
 
