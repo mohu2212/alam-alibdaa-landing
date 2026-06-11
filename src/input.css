@@ -1,0 +1,51 @@
+/* ===== الخط العربي (Tajawal) — مستضاف محليًا لتفادي حجب التحميل ===== */
+@import '../assets/fonts/tajawal.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply font-sans text-gray-800 antialiased;
+  }
+  /* تحسين العناوين العربية */
+  h1, h2, h3 {
+    @apply font-extrabold leading-tight;
+  }
+}
+
+@layer components {
+  /* زر CTA أساسي (أخضر ليموني) */
+  .btn-cta {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-lime px-6 py-3.5
+           font-bold text-brand-blue-dark shadow-cta transition-all duration-200
+           hover:bg-brand-lime-dark hover:-translate-y-0.5 active:translate-y-0
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-dark;
+  }
+  /* زر واتساب */
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-whatsapp px-6 py-3.5
+           font-bold text-white shadow-lg transition-all duration-200
+           hover:bg-whatsapp-dark hover:-translate-y-0.5 active:translate-y-0
+           focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-whatsapp-dark;
+  }
+  /* زر ثانوي (حدود) */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-white/80 px-6 py-3.5
+           font-bold text-white transition-all duration-200 hover:bg-white hover:text-brand-blue;
+  }
+  .section-pad {
+    @apply px-5 py-16 sm:px-8 md:py-24;
+  }
+  .container-x {
+    @apply mx-auto w-full max-w-6xl;
+  }
+  .eyebrow {
+    @apply mb-3 inline-block rounded-full bg-brand-lime/15 px-4 py-1.5 text-sm font-bold text-brand-blue;
+  }
+}

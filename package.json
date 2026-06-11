@@ -1,0 +1,14 @@
+{
+  "name": "alam-alibdaa-landing",
+  "version": "1.0.0",
+  "description": "صفحة هبوط شركة عالم الإبداع المتطورة للمقاولات العامة",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./styles.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./styles.css --watch",
+    "serve": "npx serve -l 5173 ."
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
